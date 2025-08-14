@@ -3,7 +3,7 @@ import Image from "next/image";
 const ContactSection = () => (
   <section
     id="contact"
-    className="py-10 px-4 max-w-6xl mx-auto flex flex-col gap-8"
+    className="py-16 px-4 sm:px-6 max-w-6xl mx-auto flex flex-col gap-8"
   >
     {/* Still have questions box */}
     <div className="w-full flex justify-center mb-8">
@@ -15,14 +15,14 @@ const ContactSection = () => (
         </div>
       </div>
     </div>
-    <div className="flex flex-col md:flex-row gap-8 items-center">
+    <div className="flex flex-col md:flex-row gap-10 items-center">
       {/* Contact Form */}
-      <form className="flex-1 bg-white rounded-lg flex flex-col gap-4">
+      <form className="flex-1 bg-white rounded-lg flex flex-col gap-4 w-full">
         <h2 className="text-2xl font-bold mb-1">Contact us</h2>
         <p className="mb-4 text-gray-700">
           Our friendly team would love to hear from you.
         </p>
-        <div className="flex gap-4">
+        <div className="flex flex-col sm:flex-row gap-4">
           <div className="flex-1">
             <label className="block text-sm font-medium mb-1 text-[#344054]">
               First name
@@ -104,14 +104,16 @@ const ContactSection = () => (
         </button>
       </form>
       {/* Image */}
-      <div className="flex-1 flex justify-center items-center">
-        <Image
-          src="/assets/images/contact.png"
-          alt="Contact Illustration"
-          width={576}
-          height={800}
-          className="rounded-lg object-cover"
-        />
+      <div className="flex-1 w-full max-w-[576px]">
+        <div className="relative w-full h-[260px] sm:h-[360px] md:h-[500px]">
+          <Image
+            src="/assets/images/contact.png"
+            alt="Contact Illustration"
+            fill
+            className="rounded-lg object-cover"
+            priority
+          />
+        </div>
       </div>
     </div>
   </section>

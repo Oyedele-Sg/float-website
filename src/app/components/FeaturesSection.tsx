@@ -40,25 +40,25 @@ const features = [
 ];
 
 const FeaturesSection = () => (
-  <section className="py-10  flex flex-col items-center bg-gradient-to-b from-[#FF0000] to-[#050201]">
-    <div className=" max-w-5xl mx-auto flex flex-col items-center ">
+  <section className="py-16 px-4 flex flex-col items-center bg-gradient-to-b from-[#FF0000] to-[#050201]">
+    <div className="max-w-6xl mx-auto flex flex-col items-center">
       <div className="text-[14px] font-bold border border-[#E9D7FE] mb-2 px-4 py-2 rounded-full text-white  text-center ">
         Features
       </div>
       <h2 className="text-2xl md:text-[36px] font-semibold mb-2 text-center text-white">
         Key Features
       </h2>
-      <p className="mb-8 text-white text-center max-w-2xl">
+      <p className="mb-10 text-white text-center max-w-2xl">
         FloatTransfer is designed to make international money transfers simple,
         secure, and affordable. Our app offers a range of features to meet your
         global financial needs:
       </p>
       <div className="w-full">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[2px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[2px]">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="flex flex-col  gap-5        bg-white  p-4"
+              className="flex flex-col gap-5 bg-white p-5"
             >
               <div className=" border border-[#B3261E] rounded-lg p-2 self-start ">
                 <Image
@@ -70,7 +70,7 @@ const FeaturesSection = () => (
               </div>
               <div className="flex flex-col gap-2">
                 <h3 className="font-semibold text-lg mt-2">{feature.title}</h3>
-                <p className="text-gray-600 text-sm mt-1">
+                <p className="text-gray-200 md:text-gray-600 text-sm mt-1">
                   {feature.description}
                 </p>
               </div>

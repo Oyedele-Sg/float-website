@@ -78,7 +78,7 @@ const BankingMadeEasy = () => {
     <section className="py-16 px-4 bg-white">
       <div className="container mx-auto max-w-6xl">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold text-center mb-16"
+          className="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-16"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -88,7 +88,7 @@ const BankingMadeEasy = () => {
         </motion.h2>
 
         <motion.div
-          className="space-y-16"
+          className="space-y-12 md:space-y-16"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -96,11 +96,11 @@ const BankingMadeEasy = () => {
         >
           {/* Process Timeline */}
           <motion.div className="relative" variants={stepVariants}>
-            <div className="flex items-center justify-between max-w-4xl mx-auto   ">
+            <div className="flex items-center justify-between max-w-4xl mx-auto px-2 sm:px-0">
               {/* Light Blue Dotted Line Above */}
 
               {/* Timeline Line */}
-              <div className="absolute top-8 left-0 right-0 h-0.5 bg-red-600 z-0"></div>
+              <div className="absolute top-8 left-2 right-2 sm:left-0 sm:right-0 h-0.5 bg-red-600 z-0"></div>
 
               {steps.map((step) => (
                 <div
@@ -108,7 +108,7 @@ const BankingMadeEasy = () => {
                   className="relative z-10 flex flex-col items-center"
                 >
                   {/* Step Circle - Plain Red Circle */}
-                  <div className="w-16 h-16 bg-[#B3261E] rounded-full border-[2px] border-[#e8defb] mb-4 flex items-center justify-center ">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-[#B3261E] rounded-full border-[2px] border-[#e8defb] mb-4 flex items-center justify-center ">
                     {" "}
                     <div className=" bg-white w-[20px] h-[20px] rounded-full "></div>{" "}
                   </div>
@@ -127,7 +127,7 @@ const BankingMadeEasy = () => {
 
           {/* Phone Mockups */}
           <motion.div
-            className=" flex flex-col md:flex-row gap-8 "
+            className="flex flex-col md:flex-row gap-8"
             variants={phoneContainerVariants}
             initial="hidden"
             whileInView="visible"
@@ -135,45 +135,45 @@ const BankingMadeEasy = () => {
           >
             {/* Phone 1 - Download App */}
             <motion.div
-              className="flex-1 flex flex-col justify-center "
+              className="flex-1 flex flex-col justify-center"
               variants={phoneVariants}
             >
-              <div className="relative w-full h-[500px] ">
+              <div className="relative w-full h-[360px] sm:h-[440px] md:h-[500px]">
                 <Image
                   src="/assets/images/info/install.png"
                   alt="install"
                   fill
-                  className=" object-contain"
+                  className="object-contain"
                 />
               </div>
             </motion.div>
 
             {/* Phone 2 - Register */}
             <motion.div
-              className="flex-1 flex flex-col justify-center "
+              className="flex-1 flex flex-col justify-center"
               variants={phoneVariants}
             >
-              <div className="relative w-full h-[500px] ">
+              <div className="relative w-full h-[360px] sm:h-[440px] md:h-[500px]">
                 <Image
                   src="/assets/images/info/register.png"
                   alt="register"
                   fill
-                  className=" object-contain"
+                  className="object-contain"
                 />
               </div>
             </motion.div>
 
             {/* Phone 3 - Send Money */}
             <motion.div
-              className="flex-1 flex flex-col justify-center "
+              className="flex-1 flex flex-col justify-center"
               variants={phoneVariants}
             >
-              <div className="relative w-full h-[500px] ">
+              <div className="relative w-full h-[360px] sm:h-[440px] md:h-[500px]">
                 <Image
                   src="/assets/images/info/send.png"
                   alt="send"
                   fill
-                  className=" object-contain"
+                  className="object-contain"
                 />
               </div>
             </motion.div>

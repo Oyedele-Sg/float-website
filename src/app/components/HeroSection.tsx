@@ -3,17 +3,17 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const HeroSection = () => (
-  <section className="w-full bg-white text-gray-900 pt- pb-[96px] px-4 relative overflow-hidden">
-    <div className="container mx-auto flex justify-between items-center min-h-[600px]">
+  <section className="w-full bg-white text-gray-900 pt-16 pb-24 px-4 relative overflow-hidden">
+    <div className="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-10 md:gap-6 md:min-h-[600px]">
       {/* Left Section - Marketing Text */}
       <motion.div
-        className="flex-1 max-w-lg"
+        className="flex-1 max-w-2xl md:max-w-lg text-center md:text-left"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <motion.h1
-          className="text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-900 mb-6 leading-tight"
+          className="text-4xl sm:text-5xl lg:text-6xl font-semibold text-gray-900 mb-6 leading-tight"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -32,7 +32,7 @@ const HeroSection = () => (
 
         {/* Download App Section */}
         <motion.div
-          className="flex items-center gap-4"
+          className="flex items-center justify-center md:justify-start gap-4 flex-wrap"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
@@ -56,7 +56,7 @@ const HeroSection = () => (
 
       {/* Right Section - Mobile App Interface */}
       <motion.div
-        className="relative w-full max-w-[437px] h-[600px] flex-shrink-0"
+        className="relative w-full max-w-[437px] h-[320px] sm:h-[420px] md:h-[600px] flex-shrink-0"
         initial={{ opacity: 0, y: 100, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}

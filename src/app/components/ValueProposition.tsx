@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 const ValueProposition = () => (
   <section className="w-full bg-white px-4">
-    <div className="container mx-auto flex items-center justify-between gap-12">
+    <div className="container mx-auto max-w-6xl flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-12">
       {/* Left Section - Mobile Phone Display */}
       <motion.div
-        className="flex justify-center relative w-full h-[537px] basis-[437px]"
+        className="flex justify-center relative w-full h-[320px] sm:h-[420px] md:h-[537px] md:basis-[437px]"
         initial={{ opacity: 0, x: -50, scale: 0.9 }}
         animate={{ opacity: 1, x: 0, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -34,7 +34,7 @@ const ValueProposition = () => (
 
       {/* Right Section - About Us Content */}
       <motion.div
-        className="flex-1"
+        className="flex-1 text-center md:text-left"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -71,7 +71,7 @@ const ValueProposition = () => (
         </motion.p>
 
         <motion.div
-          className="flex items-center gap-2 text-purple-600 font-medium cursor-pointer group"
+          className="flex items-center justify-center md:justify-start gap-2 text-purple-600 font-medium cursor-pointer group"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1, ease: "easeOut" }}
@@ -97,7 +97,7 @@ const ValueProposition = () => (
 
         {/* Country Flags */}
         <motion.div
-          className="flex items-center gap-4 mt-8"
+          className="flex items-center justify-center md:justify-start gap-4 mt-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}

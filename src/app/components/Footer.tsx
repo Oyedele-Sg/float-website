@@ -1,8 +1,8 @@
 import Image from "next/image";
 
 const Footer = () => (
-  <footer className="bg-gradient-to-b from-[#0E0201] from-[33.65%] to-[#F90101] to-[100%]  text-white py-8 px-4 mt-10">
-    <div className="max-w-6xl mx-auto flex flex-col gap-6">
+  <footer className="bg-gradient-to-b from-[#0E0201] from-[33.65%] to-[#F90101] to-[100%] text-white py-10 px-4 sm:px-6 mt-10">
+    <div className="max-w-6xl mx-auto flex flex-col gap-8">
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-2 mb-4 md:mb-0">
           <Image
@@ -20,9 +20,9 @@ const Footer = () => (
           KYC/AML policies and international money transfer laws
         </div>
       </div>
-      <div className=" ">
-        <div className="flex justify-between  mb-4">
-          <nav className="flex gap-8 text-sm font-semibold">
+      <div>
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-4">
+          <nav className="flex flex-wrap gap-6 text-sm font-semibold">
             <a href="#" className="hover:underline">
               Features
             </a>
@@ -71,8 +71,10 @@ const Footer = () => (
         {/* Divider */}
         <div className="border-t border-gray-700 mb-4" />
         {/* Bottom row */}
-        <div className="flex justify-between items-center text-xs text-white">
-          <span>© 2077 Untitled UI. All rights reserved.</span>
+        <div className="flex flex-col md:flex-row gap-2 md:gap-0 md:justify-between md:items-center text-xs text-white">
+          <span className="opacity-90">
+            © 2077 Untitled UI. All rights reserved.
+          </span>
         </div>
       </div>
     </div>

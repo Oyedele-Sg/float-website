@@ -115,17 +115,17 @@ const WhatSetsUsApart = () => {
           {/* Top Row - Black card gets more space, pink card gets less */}
           <motion.div className="lg:col-span-4" variants={cardVariants}>
             <div
-              className={`${features[0].bgColor} ${features[0].textColor} rounded-xl py-[80px] px-[86px] shadow-lg h-full flex items-center gap-12`}
+              className={`${features[0].bgColor} ${features[0].textColor} rounded-xl py-10 md:py-[80px] px-6 md:px-[86px] shadow-lg h-full flex flex-col md:flex-row items-center gap-6 md:gap-12`}
             >
               <div className={`${features[0].iconColor} mb-3`}>
                 <Image
                   src={`/assets/images/specials/${features[0].icon}.svg`}
                   alt={features[0].title}
-                  width={268}
-                  height={242}
+                  width={220}
+                  height={200}
                 />
               </div>
-              <div className="">
+              <div className="text-center md:text-left">
                 <h3 className="font-bold text-lg mb-3">{features[0].title}</h3>
                 <p className="text-sm opacity-90">{features[0].description}</p>
               </div>
@@ -141,7 +141,7 @@ const WhatSetsUsApart = () => {
                 <div className={`${features[0].iconColor} mb-3`}>
                   <Image
                     src={`/assets/images/specials/${features[1].icon}.svg`}
-                    alt={features[0].title}
+                    alt={features[1].title}
                     width={115}
                     height={115}
                   />

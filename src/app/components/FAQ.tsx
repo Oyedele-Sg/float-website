@@ -70,11 +70,11 @@ const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-12 px-4 max-w-3xl mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-2">
+    <section className="py-12 px-4 sm:px-6 max-w-3xl mx-auto">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-2">
         Frequently asked questions
       </h2>
-      <p className="text-gray-500 text-center mb-8 text-lg">
+      <p className="text-gray-500 text-center mb-8 text-base md:text-lg">
         Everything you need to know about the product and billing.
       </p>
       <div className="divide-y divide-gray-200 border-t border-b border-gray-200">
@@ -83,7 +83,7 @@ const FAQ = () => {
             <button
               className="w-full flex justify-between items-center py-5 text-left focus:outline-none"
               onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-              aria-expanded={openIndex === idx}
+              aria-controls={`faq-panel-${idx}`}
             >
               <span className="font-medium text-base text-gray-900">
                 {faq.link ? (
@@ -110,10 +110,12 @@ const FAQ = () => {
               </span>
             </button>
             <div
+              id={`faq-panel-${idx}`}
               className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                openIndex === idx ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                openIndex === idx
+                  ? "max-h-60 md:max-h-80 opacity-100"
+                  : "max-h-0 opacity-0"
               } pl-1 pr-8`}
-              style={{ minHeight: openIndex === idx ? 48 : 0 }}
             >
               <div className="text-gray-700 text-[15px] pt-1">
                 {openIndex === idx && faq.answer}
